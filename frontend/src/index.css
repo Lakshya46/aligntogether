@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg-app: #f8fafc;
+  --primary: #6366f1;
+  --high-priority: #ef4444;
+  --medium-priority: #f59e0b;
+  --low-priority: #10b981;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-app);
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+:root {
+ 
+  --primary: #6366f1;        
+  --primary-light: #eef2ff;
+  --primary-dark: #4f46e5;
+
+
+  --high-bg: #fff1f2;         
+  --high-text: #e11d48;      
+  --medium-bg: #fff7ed;      
+  --medium-text: #d97706;     
+  --low-bg: #f0fdf4;         
+  --low-text: #16a34a;        
+
+
+  --bg-main: #f8fafc;         
+  --text-main: #0f172a;     
+  --text-muted: #64748b;     
+  --border: #e2e8f0;         
+}
+
+:root {
+
+  --status-pending-bg: #f1f5f9;
+  --status-pending-text: #475569;
+  --status-progress-bg: #e0e7ff;
+  --status-progress-text: #4338ca;
+  --status-done-bg: #dcfce7;
+  --status-done-text: #15803d;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+}
+
+
+.status-pill.pending { 
+  background-color: var(--status-pending-bg); 
+  color: var(--status-pending-text); 
+}
+
+.status-pill.in-progress { 
+  background-color: var(--status-progress-bg); 
+  color: var(--status-progress-text); 
+}
+
+.status-pill.completed { 
+  background-color: var(--status-done-bg); 
+  color: var(--status-done-text); 
+}
+

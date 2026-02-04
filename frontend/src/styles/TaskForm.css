@@ -1,0 +1,177 @@
+/* Container and Card */
+.task-form-container {
+  background: #ffffff;
+  max-width: 550px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  overflow: visible; /* Important for dropdown visibility */
+}
+
+/* Header Section */
+.task-form-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 1.25rem;
+}
+
+.task-form-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #6366f1;
+  margin: 0;
+}
+
+.icon-add {
+  color: #6366f1;
+  background: #f0f1ff;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.task-form-hint {
+  display: block;
+  margin-top: 8px;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* Form Layout */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.task-form input[type="text"],
+.task-form textarea,
+.input-icon input[type="date"] {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #334155;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+
+.task-form input:focus,
+.task-form textarea:focus {
+  outline: none;
+  background: #fff;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Position Icons inside Date and React Select */
+.input-icon .icon-date,
+.input-icon .icon-priority {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6366f1;
+  z-index: 10; 
+  pointer-events: none; 
+}
+
+
+.input-icon input {
+  padding-left: 42px !important;
+}
+
+
+.react-select-container {
+  width: 100%;
+}
+
+
+.react-select__menu {
+  z-index: 9999 !important;
+}
+
+
+.task-form button[type="submit"] {
+  background: #6366f1;
+  color: white;
+  padding: 16px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.task-form button:hover:not(:disabled) {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+}
+
+.task-form button:disabled {
+  background: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+
+.form-error {
+  background: #fff1f2;
+  color: #e11d48;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-left: 5px solid #e11d48;
+  margin-bottom: 1.5rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 550px) {
+  .task-form-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
