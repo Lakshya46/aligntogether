@@ -22,6 +22,7 @@ app.use(cors(corsOptions));
 
 
 app.use(express.json());
+console.log("testing")
 
 // Routes
 app.use("/api/auth", require("./routes/authRoutes"));
